@@ -121,6 +121,7 @@ protected:
 
 int main(int argc, char *argv)
 {
+    printf("Hello World!\n");
     objective_function obj;
     return obj.run(N);
 }
