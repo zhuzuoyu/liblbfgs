@@ -1,20 +1,20 @@
-	Local Branch
+	    Local Branch
  		 |
 		 |
-	  git add 
-	  git commit
+	      git add 
+	      git commit
 		 |
 		 |
 		\|/
 		 -
-	Remote Branch
+	   Remote Branch
 		 |
 		 |
-git push origin  master
+        git push origin  master
 		 |
 		 |
 		\|/
 		 -
-	Center DataBase
+	   Center DataBase
 
 	
