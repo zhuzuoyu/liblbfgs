@@ -118,10 +118,33 @@ protected:
 
 
 #define N   100
-
-int main(int argc, char *argv)
+nt main(int argc, char *argv[])
 {
-    printf("Hello World!\n");
+    char wday[][4] = {"Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"};
+    time_t timep;
+    struct tm *p;
+    time(&timep);
+    p = gmtime(&timep);
+    printf("%d %d %d ", (1900+p->tm_year), (1+p->tm_mon), p->tm_mday);
+    printf("%s %d;%d;%d\n", wday[p->tm_wday], p->tm_hour, p->tm_min, p->tm_sec);
+    
+    //double start, finish;
+    //start = clock();
+                                                                                                cout<<"-The beginning ..."<<endl;
     objective_function obj;
-    return obj.run(N);
+    double rslt = obj.run(N);
+                                                                                                cout<<"-The ending ..."<<endl;
+    //finish = clock();
+    //cout<<(double)(finish - start)/CLOCKS_PER_SEC<<endl;
+                                                                                                
+    printf("%d %d %d ", (1900+p->tm_year), (1+p->tm_mon), p->tm_mday);
+    printf("%s %d;%d;%d\n", wday[p->tm_wday], p->tm_hour, p->tm_min, p->tm_sec);
+
+    time_t timep1;
+    struct tm *p1;
+    time(&timep1);
+    p1 = gmtime(&timep1);
+    printf("%d %d %d ", (1900+p1->tm_year), (1+p1->tm_mon), p1->tm_mday);
+    
+    return ret;
 }
