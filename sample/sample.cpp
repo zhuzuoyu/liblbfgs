@@ -1,5 +1,8 @@
 #include <stdio.h>
 #include <lbfgs.h>
+#include <unistd.h>
+#include <iostream>
+using namespace std;
 
 class objective_function
 {
@@ -118,7 +121,7 @@ protected:
 
 
 #define N   100
-nt main(int argc, char *argv[])
+int main(int argc, char *argv[])
 {
     char wday[][4] = {"Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"};
     time_t timep;
@@ -145,6 +148,6 @@ nt main(int argc, char *argv[])
     time(&timep1);
     p1 = gmtime(&timep1);
     printf("%d %d %d ", (1900+p1->tm_year), (1+p1->tm_mon), p1->tm_mday);
-    
-    return ret;
+    printf("%s %d;%d;%d\n", wday[p1->tm_wday], p1->tm_hour, p1->tm_min, p1->tm_sec);
+    return rslt;
 }
