@@ -121,7 +121,7 @@ protected:
 
 
 #define N   100
-nt main(int argc, char *argv[])
+int main(int argc, char *argv[])
 {
     char wday[][4] = {"Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"};
     time_t timep;
