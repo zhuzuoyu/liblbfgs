@@ -1,0 +1,120 @@
+Set Up Git
+ Download and Install Git
+  run "sudo apt-get install git" in the command line  
+ Set Up Git
+  git config --global user.name "Your Name Here"
+  # Sets the default name for Git to use when you commit
+  git config --global user.email "your_email@example.com"
+  # Sets the default email for git to use when you commit
+  
+Create A Repo
+ Create a README for your repository
+  Step 1: Create the README file
+   mkdir ~/Hello-World
+   # Creates a directory for your project called "Hello-World" in your user directory
+   cd ~/Hello-World
+   # Changes the current working directory to your newly created directory
+
+   git init
+   # Sets up the necessary Git files
+   # Initialized empty Git repository in /Users/you/Hello-World/.git/
+
+   touch README
+   # Creates a file called "README" in your Hello-World directory
+  
+  Step 2: Commit your README
+   git add README
+   # Stages your README file, adding it to the list of files to be committed
+
+   git commit -m 'first commit'
+   # Commits your files, adding the message "first commit"
+  
+  Step 3: Push your commit
+   git remote add origin https://github.com/username/Hello-World.git
+   # Creates a remote named "origin" pointing at your GitHub repository
+
+   git push origin master
+   # Sends your commits in the "master" branch to GitHub
+
+Fork A Repo 
+ Contributing to a project 
+  Step 1: Fork the "liblbfgs" repository in your account
+  
+  Step 2: Clone your fork
+   git clone https://github.com/username/Spoon-Knife.git
+   # Clones your fork of the repository into the current directory in terminal
+ 
+  Step 3: Configure remotes
+   cd Spoon-Knife
+   # Changes the active directory in the prompt to the newly cloned "Spoon-Knife" directory
+   git remote add upstream https://github.com/octocat/Spoon-Knife.git
+   # Assigns the original repository to a remote called "upstream"
+   git fetch upstream
+   # Pulls in changes not present in your local repository, without modifying your files 
+ More Thing You Can Do
+  Push commits
+   git push origin master
+   # Pushes commits to your remote repository stored on GitHub
+ 
+  Pull in upstream changes
+   git fetch upstream
+   # Fetches any new changes from the original repository
+   git merge upstream/master
+   # Merges any changes fetched into your working files
+  
+  Create branches
+   git branch mybranch
+   # Creates a new branch called "mybranch"
+   git checkout mybranch
+   # Makes "mybranch" the active branch 
+   
+   git checkout master
+   # Makes "master" the active branch
+   git merge mybranch
+   # Merges the commits from "mybranch" into "master"
+   git branch -d mybranch
+   # Deletes the "mybranch" branch
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
